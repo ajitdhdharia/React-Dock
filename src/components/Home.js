@@ -44,23 +44,6 @@ function Home() {
                                     <div className="col-12 col-md-6 vertical-center header-sections pb-5">
                                         <div>
                                             <h1 className="header-text w-100">
-                                                {/* 
-                    <span className='letter-anim transition big-letter'>R</span>
-                    <span className='letter-anim transition'>e</span>
-                    <span className='letter-anim transition'>a</span>
-                    <span className='letter-anim transition'>c</span>
-                    <span className='letter-anim transition'>t</span>
-                    <span> </span>
-
-
-                    <span className='letter-anim transition big-letter'>p</span>
-                    <span className='letter-anim transition'>r</span>
-                    <span className='letter-anim transition'>o</span>
-                    <span className='letter-anim transition'>j</span>
-                    <span className='letter-anim transition'>e</span>
-                    <span className='letter-anim transition'>c</span>
-                    <span className='letter-anim transition'>t</span>
-                    <span className='letter-anim transition'>s</span> */}
 
                                                 <span className="letter-anim transition">L</span>
                                                 <span className="letter-anim transition">e</span>
