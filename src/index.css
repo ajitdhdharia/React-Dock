@@ -63,7 +63,7 @@ code {
   height: 100%;
   width: auto;
   background-color: transparent !important;
-  transform: scale(3);
+  /* transform: scale(3); */
   padding-left: 10px;
 }
 
@@ -369,6 +369,7 @@ code {
 
 .basic_project_container {
   position: relative;
+  margin-bottom: 10rem;
 
   background-image: linear-gradient(
     -130deg,
@@ -516,7 +517,7 @@ code {
   height: 50px;
   width: auto;
   background-color: transparent !important;
-  transform: scale(3);
+  /* transform: scale(3); */
 }
 
 .footer-foot-div {
