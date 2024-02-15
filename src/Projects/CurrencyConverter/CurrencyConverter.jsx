@@ -4,9 +4,9 @@ import useCurrencyInfo from "./hooks/useCurrencyInfo";
 
 const CurrencyConverter = () => {
   const [amount, setAmount] = useState(0);
+  const [convertedAmount, setConvertedAmount] = useState(0);
   const [from, setFrom] = useState("inr");
   const [to, setTo] = useState("usd");
-  const [convertedAmount, setConvertedAmount] = useState(0);
 
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
@@ -23,12 +23,7 @@ const CurrencyConverter = () => {
   };
 
   return (
-    <div
-      className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-      style={{
-        backgroundImage: `url('https://www.pexels.com/photo/close-up-of-coin-318820/')`,
-      }}
-    >
+    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat">
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
@@ -41,10 +36,12 @@ const CurrencyConverter = () => {
               <InputBox
                 label="From"
                 amount={amount}
-                options={options}
+                onAmountChange={(amount) => setAmount(amount)}
                 onCurrencyChange={(currency) => setAmount(currency)}
+                currencyOptions={options}
                 selectCurrency={from}
-                amountDisable
+                amountDisable={false}
+                currencyDisable={false}
               />
             </div>
             <div className="relative w-full h-0.5">
@@ -60,10 +57,9 @@ const CurrencyConverter = () => {
               <InputBox
                 label="To"
                 amount={convertedAmount}
-                options={options}
+                currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
                 selectCurrency={to}
-                amountDisable
               />
             </div>
             <button
